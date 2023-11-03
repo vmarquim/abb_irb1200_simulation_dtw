@@ -11,7 +11,7 @@ sudo apt install ros-noetic-desktop-full
 source /opt/ros/noetic/setup.bash
 ```
 
-3. Install Moveit [Tutorial here](https://moveit.ros.org/install/)
+2. Install Moveit [Tutorial here](https://moveit.ros.org/install/)
 ```
 sudo apt install ros-noetic-moveit
 ```
@@ -28,12 +28,13 @@ roslaunch abb_irb1200_simulation_dtw simulation_dtw_program.launch
 
 5. Run the run and compare launch file
 ```
-roslaunch abb_irb1200_simulation_dtw run_and_compare.launch --mode
+roslaunch abb_irb1200_simulation_dtw run_and_compare.launch run_mode:=[run_mode]
 ```
 
-6. Flags
+6. Possible values for run_mode (default is run_mode:="square")
 ```
---square
---circle
---random-valid
+"square"
+"circle"
+"line"
+"random-valid"
 ```
